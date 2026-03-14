@@ -8,7 +8,7 @@
   <meta name="keywords" content="whatsapp group transcription, voice note business, team voice memory, whatsapp voice to text business, group chat transcription, field team communication, construction team whatsapp, logistics team transcription, voice note search, business whatsapp bot, AI team assistant, transcripción grupos whatsapp, memoria de voz equipo, transcription groupe whatsapp entreprise, transcrição grupo whatsapp">
   <meta property="og:title" content="Retena — Your team never forgets.">
   <meta property="og:description" content="Retena silently captures every message and voice note in your WhatsApp groups — transcribed, encrypted, and searchable with AI. From $39/mo per team.">
-  <meta property="og:image" content="https://retena.app/og.png">
+  <meta property="og:image" content="https://retena.app/og.svg">
   <meta property="og:url" content="https://retena.app">
   <meta property="og:site_name" content="Retena">
   <meta property="og:type" content="website">
@@ -153,8 +153,8 @@
     .ctbl th{padding:11px 15px;text-align:left;color:var(--t3);font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--bd);background:var(--bg2)}
     .ctbl td{padding:11px 15px;border-bottom:1px solid var(--bd);vertical-align:middle}
     .ctbl tr:last-child td{border-bottom:none}
-    .rewa-r{background:rgba(16,185,129,.04)}
-    .rewa-r td:first-child{font-weight:700;color:var(--a2)}
+    .retena-r{background:rgba(16,185,129,.04)}
+    .retena-r td:first-child{font-weight:700;color:var(--a2)}
     .ck{color:#4ade80}.cx{color:#f87171}
     .tbl-wrap{overflow-x:auto;border-radius:14px;border:1px solid var(--bd)}
     /* Testimonials */
@@ -480,7 +480,7 @@
           <th data-i18n="cmpPrice">Price</th>
         </tr></thead>
         <tbody>
-          <tr class="rewa-r"><td>🧠 <strong>Retena</strong></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td style="color:var(--a2);font-weight:700">$39/team</td></tr>
+          <tr class="retena-r"><td>🧠 <strong>Retena</strong></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td style="color:var(--a2);font-weight:700">$39/team</td></tr>
           <tr><td>🔥 Fireflies.ai</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td style="color:var(--t3)">$19/seat/mo</td></tr>
           <tr><td>🦦 Otter.ai</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td><td><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td style="color:var(--t3)">$20/seat/mo</td></tr>
           <tr><td>🎯 Laxis</td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td><span class="ck">✓</span></td><td><span class="cx">✗</span></td><td><span class="cx">✗</span></td><td style="color:var(--t3)">$15.99/seat/mo</td></tr>
@@ -547,7 +547,7 @@
     <h2 data-i18n="ctaTitle">Stop losing your team's decisions to WhatsApp</h2>
     <p data-i18n="ctaSub">Join the waitlist. Early access members lock their rate forever. Setup in 2 minutes.</p>
     <div class="ctas" style="justify-content:center;margin-bottom:1.5rem">
-      <a href="https://wa.me/message/REWA" class="btn btn-p" data-i18n="ctaWA">💬 Connect on WhatsApp</a>
+      <a href="#waitlist" class="btn btn-p" data-i18n="ctaWA">💬 Connect on WhatsApp</a>
       <a href="https://t.me/RetenaApp" class="btn btn-s" data-i18n="ctaTG">✈️ Message on Telegram</a>
     </div>
     <div class="wf-form">
@@ -639,7 +639,7 @@ function applyLang(code){
   document.querySelectorAll('.lang-opt').forEach(o=>{
     o.classList.toggle('active',o.dataset.code===code);
   });
-  localStorage.setItem('rewa-lang',code);
+  localStorage.setItem('retena-lang',code);
 }
 
 function buildLangOpts(filter=''){
@@ -660,7 +660,7 @@ function buildLangOpts(filter=''){
       if(!T[code]){ // Non-UI-lang: just update flag/code display
         document.getElementById('langFlag').textContent=flag;
         document.getElementById('langCode').textContent=code.toUpperCase();
-        localStorage.setItem('rewa-lang',code);
+        localStorage.setItem('retena-lang',code);
       }
       closeLang();
     };
@@ -713,7 +713,7 @@ async function joinWL(){
 
 // Init
 (function(){
-  const saved=localStorage.getItem('rewa-lang');
+  const saved=localStorage.getItem('retena-lang');
   const browserLang=(navigator.language||'en').split('-')[0].toLowerCase();
   const best=saved||(T[browserLang]?browserLang:'en');
   buildLangOpts();
